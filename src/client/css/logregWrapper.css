@@ -1,0 +1,9 @@
+.LogRegContainer{
+    position:absolute;
+    top:135px;
+    margin-left: 90px;
+    background:rgba(255, 0, 0, 0.18);
+    padding:20px;
+    width:345px;
+    border-radius: 4px;
+}

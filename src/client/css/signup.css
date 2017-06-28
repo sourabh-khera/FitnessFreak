@@ -1,0 +1,69 @@
+.sign_up {
+    float: right;
+    border-radius: 4px;
+    background-color: maroon;
+    border: 1px solid maroon;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.SignContainer input[type="text"] {
+    border-radius: 4px;
+    border: 1px solid maroon;
+    height: 30px;
+    width: 100%;
+    background-color: maroon;
+    color: white;
+    display: block;
+    margin-top: 16px;
+}
+
+.SignContainer input[type="password"] {
+    border-radius: 4px;
+    height: 30px;
+    width: 100%;
+    background-color: maroon;
+    border: 1px solid maroon;
+    display: block;
+    margin-top: 6px;
+}
+
+.login {
+    border-radius: 4px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: maroon;
+    border: 1px solid maroon;
+    color: white;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.login a{
+    text-decoration: none;
+    color:white;
+}
+
+h7 {
+    text-transform: uppercase;
+    margin-left: 136px;
+    font-family: 'Spectral', serif;
+    font-weight: bolder;
+    color: white;
+}
+
+label {
+    color: white;
+    font-weight: bolder;
+    font-family: 'Spectral', serif;
+    font-size: large;
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.bottomHr {
+    margin-top: 75px;
+}
