@@ -1,0 +1,52 @@
+.HomeContainer {
+    background-image: url("../assets/image/Male-Female.jpg");
+    background-size: cover;
+    height:678px;
+    position: relative;
+}
+.HomeChildContainer {
+    position: absolute;
+    right: 70px;
+    top: -20px;
+    height:100px;
+}
+
+.womenButton{
+    color:white;
+    width: 100px;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    background-color: palevioletred;
+    padding: 20px;
+    text-align: center;
+    border:none;
+    border-radius: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.menButton{
+    color:white;
+    width: 100px;
+    position: absolute;
+    top: 300px;
+    right: 250px;
+    background-color: palevioletred;
+    padding: 20px;
+    text-align: center;
+    border:none;
+    border-radius: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.HomeHeading{
+    font-family: 'Bowlby One SC', cursive;
+    color: orange;
+    position: absolute;
+    top: 10px;
+    font-weight: bolder;
+    font-size: 50px;
+    left: 60px;
+}

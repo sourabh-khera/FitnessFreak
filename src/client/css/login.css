@@ -19,7 +19,8 @@
     border-radius: 4px;
     border: 1px solid maroon;
     height: 30px;
-    width: 100%;
+    width: calc(100% - 10px);
+    padding-left: 10px;
     background-color: maroon;
     color: white;
     display: block;
@@ -29,7 +30,8 @@
 .LoginContainer input[type="password"] {
     border-radius: 4px;
     height: 30px;
-    width: 100%;
+    width: calc(100% - 10px);
+    padding-left: 10px;
     background-color: maroon;
     border: 1px solid maroon;
     display: block;
