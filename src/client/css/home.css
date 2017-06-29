@@ -11,12 +11,15 @@
     height:100px;
 }
 
-.womenButton{
-    color:white;
-    width: 100px;
+.women{
+    width:150px;
     position: absolute;
     top: 300px;
     left: 300px;
+}
+.women button{
+    color:white;
+    width: 100%;
     background-color: palevioletred;
     padding: 20px;
     text-align: center;
@@ -24,14 +27,27 @@
     border-radius: 30px;
     font-weight: bolder;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.menButton{
+.homeQuote{
+    position: absolute;
     color:white;
-    width: 100px;
+    left: 360px;
+    bottom: 100px;
+    font-size: 50px;
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.men{
+    width: 150px;
     position: absolute;
     top: 300px;
     right: 250px;
+}
+.men button{
+    color:white;
+    width:100%;
     background-color: palevioletred;
     padding: 20px;
     text-align: center;
@@ -39,6 +55,7 @@
     border-radius: 30px;
     font-weight: bolder;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .HomeHeading{

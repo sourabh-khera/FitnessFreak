@@ -11,8 +11,13 @@ export default class Home extends React.Component{
                  <div className="HomeChildContainer">
                      <Navbar/>
                  </div>
-                <div className="womenButton">Women</div>
-                <div className="menButton">Men</div>
+                <div className="women">
+                    <button>Women</button>
+                </div>
+                <div className="men">
+                    <button>Men</button>
+                </div>
+                <div className="homeQuote">Eat Clean Train Dirty</div>
             </div>
         )
     }
