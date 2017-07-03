@@ -36,6 +36,7 @@
     border: 1px solid maroon;
     display: block;
     margin-top: 16px;
+    color:white;
 }
 
 .login {
@@ -49,6 +50,10 @@
     margin-top: 18px;
     cursor: pointer;
 
+}
+.login a{
+    color:white;
+    text-decoration: none;
 }
 
 h7 {

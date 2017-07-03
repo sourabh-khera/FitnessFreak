@@ -1,3 +1,9 @@
+
+
+*{
+    margin:0;
+    padding:0;
+}
 .LandingContainer {
     height: 675px;
     position: relative;
@@ -8,9 +14,6 @@
     height: 100%;
 }
 
-body {
-    margin: 0;
-}
 .LandingChildContainer {
     position: absolute;
     top: 40px;
