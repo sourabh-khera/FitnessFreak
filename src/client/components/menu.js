@@ -3,6 +3,7 @@
  */
 
 import React from "react"
+import {Link} from "react-router-dom"
 
 export default class Menu extends React.Component{
     render(){
@@ -15,11 +16,11 @@ export default class Menu extends React.Component{
                     <button>Gallery</button>
                 </div>
                 <div className="item3">
-                    <button>
+                    <button><Link to="/createpost">
                         Upload Photos<br/>
                              &<br/>
                             Videos
-                    </button>
+                    </Link></button>
                 </div>
                 <div className="MenuHeading">Muscle n Fitness</div>
             </div>

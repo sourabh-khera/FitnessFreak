@@ -1,7 +1,6 @@
 .WelcomeContainer{
     position:relative;
     height: 675px;
-
 }
 .WelcomeContainer img{
     width:100%;
@@ -32,4 +31,8 @@
     text-transform: uppercase;
     cursor: pointer;
     border:none;
+}
+.WelcomeChildContainer button a{
+    text-decoration: none;
+    color:white;
 }

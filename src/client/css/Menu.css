@@ -21,6 +21,11 @@
     padding:52px;
     border-radius:20px;
 }
+.item1 button a{
+    text-decoration: none;
+    color:white;
+}
+
 .item2{
     position: absolute;
     top:225px;
@@ -35,6 +40,11 @@
     padding:56px;
     border-radius:20px;
 }
+.item2 button a{
+    text-decoration: none;
+    color:white;
+}
+
 
 .MenuHeading{
     font-family: 'Bowlby One SC', cursive;
@@ -45,6 +55,7 @@
     font-size: 50px;
     right: 100px;
 }
+
 
 .item3{
     position: absolute;
@@ -59,5 +70,8 @@
     border:none;
     padding:35px;
     border-radius:20px;
-
+}
+.item3 button a{
+    text-decoration: none;
+    color:white;
 }

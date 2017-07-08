@@ -6,14 +6,14 @@ const userService = require("./user.service");
 const bcrypt = require("bcrypt");
 const jwtToken = require("jsonwebtoken");
 exports.createUser = (req, res) => {
-    const name = req.body.userName;
-    const email = req.body.userEmail;
-    const password = req.body.userPassword;
+    const email = req.body.Email;
+    const password = req.body.Password;
     const saltRounds = 5;
     bcrypt.hash(password, saltRounds).then((hash) => {
-        userService.userEntry(name, email, hash)
-            .then(user => {
-                res.send({user})
+        userService.userEntry(email, hash)
+            .then((created) => {
+               console.log("created---------",created)
+                res.send({created})
             })
             .catch(error => {
                 res.send(error)
@@ -40,5 +40,16 @@ exports.authenticateUser = (req, res) => {
             } else {
                 res.json({auth: false})
             }
+        })
+};
+
+exports.checkUserPresence = (req,res) => {
+    const email=req.query.Email;
+    userService.checkUserExist(email)
+        .then(exist=>{
+            res.send({exist})
+        })
+        .catch(error=>{
+            res.send(error)
         })
 };

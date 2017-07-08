@@ -6,5 +6,6 @@ const userController=require("./user.controller");
 
  module.exports=(app) => {
      app.post('/api/user/create',userController.createUser);
-     app.post('/api/user/auth',userController.authenticateUser)
+     app.post('/api/user/auth',userController.authenticateUser);
+     app.get('/api/user/exist',userController.checkUserPresence);
  };

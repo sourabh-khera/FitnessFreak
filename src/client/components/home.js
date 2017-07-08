@@ -3,6 +3,7 @@
  */
 import React from "react"
 import Navbar from "./navbar"
+import {Link} from "react-router-dom"
 export default class Home extends React.Component{
     render(){
         return(
@@ -15,7 +16,7 @@ export default class Home extends React.Component{
                     <button>Women</button>
                 </div>
                 <div className="men">
-                    <button>Men</button>
+                    <button><Link to="/menu">Men</Link></button>
                 </div>
                 <div className="homeQuote">Eat Clean Train Dirty</div>
             </div>

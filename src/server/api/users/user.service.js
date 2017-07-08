@@ -4,37 +4,44 @@
 
 const userModel = require("./user.model");
 
-exports.userEntry = (name, email, hash) => {
+exports.userEntry = (email, hash) => {
     return new Promise((resolve, reject) => {
-        userModel.findOne({userEmail: email}, (err, user) => {
-            if (user) {
-                resolve("user Already Exists");
+        userModel.create({
+                userEmail: email,
+                userPassword: hash
+            },
+            (err, user) => {
+                if (err) {
+                    reject(err)
+                }
+                resolve(true)
             }
-            else {
-                userModel.create({
-                        userName: name,
-                        userEmail: email,
-                        userPassword: hash
-                    },
-                    (err, user) => {
-                        if (err) {
-                            reject(err)
-                        }
-                        resolve("user Created")
-                    }
-                )
-            }
-        })
+        )
     })
-
 };
 
+
 exports.getUserByEmail = (userEmail) => {
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
         userModel.findOne({userEmail}, (err, user) => {
-            if(err) { reject(err) }
+            if (err) {
+                reject(err)
+            }
             resolve(user)
         })
     })
 
+};
+exports.checkUserExist = (userEmail) => {
+    return new Promise((resolve,reject) => {
+         userModel.findOne({userEmail},(err,user) => {
+             if(err){
+                 reject(err)
+             }
+             if(user){
+                 resolve(true)
+             }
+             resolve(false)
+         })
+    })
 };

@@ -5,7 +5,9 @@ import {
     createUserSuccess,
     createUserFailure,
     authenticateUserSuccess,
-    authenticateUserFailure
+    authenticateUserFailure,
+    userExistSuccess,
+    userExistFailure
 } from "./user.actions"
 
 
@@ -22,8 +24,7 @@ export const createUser=(userDetails)=>{
         })
             .then(response=>response.json())
             .then((data)=>{
-
-                dispatch(createUserSuccess())
+                dispatch(createUserSuccess(data.created))
             })
             .catch(error=>{
                 dispatch(createUserFailure(error))
@@ -51,4 +52,19 @@ export const authenticateUser = (email,password) => {
                 dispatch(authenticateUserFailure(error))
             })
     }
+};
+
+export const userExist=(email) => {
+ return (dispatch) => {
+     fetch("http://localhost:3000/api/user/exist?Email="+email,{
+         method:'get'
+     })
+         .then(response=>response.json())
+         .then(data=>{
+             dispatch(userExistSuccess(data.exist))
+         })
+         .catch(error=>dispatch(userExistFailure(error)))
+ }
+
+
 };
