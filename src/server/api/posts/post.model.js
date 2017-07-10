@@ -8,7 +8,7 @@ const PostSchema=new Mongoose.Schema({
         type:String
     },
     postedBy:{
-        type: Mongoose.Schema.Types.Email,
+        type: Mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
     Image:{

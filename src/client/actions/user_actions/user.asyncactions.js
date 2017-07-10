@@ -33,7 +33,6 @@ export const createUser=(userDetails)=>{
 };
 
 export const authenticateUser = (email,password) => {
-    console.log("email---",email,"password---",password);
     return (dispatch) => {
         fetch("http://localhost:3000/api/user/auth",{
             method:'post',

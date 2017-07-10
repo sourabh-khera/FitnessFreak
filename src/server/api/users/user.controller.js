@@ -12,7 +12,7 @@ exports.createUser = (req, res) => {
     bcrypt.hash(password, saltRounds).then((hash) => {
         userService.userEntry(email, hash)
             .then((created) => {
-               console.log("created---------",created)
+                console.log("created---------", created)
                 res.send({created})
             })
             .catch(error => {
@@ -23,33 +23,40 @@ exports.createUser = (req, res) => {
 exports.authenticateUser = (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
-    const user = {
-        Email: req.query.userEmail,
-    };
+    let userId;
     userService.getUserByEmail(email)
-        .then(user => bcrypt.compare(password, user.userPassword))
-        .then(auth => {
-            if (auth) {
-                const token = jwtToken.sign(user, process.env.SECRET_KEY, {
-                    expiresIn: 5000,
-                });
-                res.json({
-                    token: token,
-                    auth: auth,
-                })
-            } else {
-                res.json({auth: false})
-            }
-        })
+        .then(user => {
+            userId = user._id;
+            bcrypt.compare(password, user.userPassword).then(auth => {
+                if (auth) {
+                    const userClaim = {
+                        Email: email,
+                        Id: userId,
+                    };
+                    const token = jwtToken.sign(userClaim, process.env.SECRET_KEY, {
+                        expiresIn: 5000,
+                    });
+                    res.json({
+                        token: token,
+                        auth: auth,
+                    })
+                } else {
+                    res.json({auth: false})
+                }
+            })
+        }).catch(error => {
+        res.send(error)
+    })
+
 };
 
-exports.checkUserPresence = (req,res) => {
-    const email=req.query.Email;
+exports.checkUserPresence = (req, res) => {
+    const email = req.query.Email;
     userService.checkUserExist(email)
-        .then(exist=>{
+        .then(exist => {
             res.send({exist})
         })
-        .catch(error=>{
+        .catch(error => {
             res.send(error)
         })
 };

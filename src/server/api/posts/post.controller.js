@@ -1,16 +1,19 @@
-/**
- * Created by sourabh on 7/7/17.
- */
 
-const postService=require("./post.service");
+const postService = require("./post.service");
 
-exports.createPost = (req,res) => {
-  const postbody=req.body.postData;
-   postService.postCreation(postbody)
-       .then((post)=>{
-          res.send({post})
-       })
-       .catch((error)=>{
-       res.send(error)
-       })
+exports.createPost = (req, res) => {
+    const postbody = req.body.postBody;
+    const image=req.body.image;
+    console.log("image---------",image);
+    const userId = req.userId;
+    postService.postCreation(postbody, userId,image)
+        .then(
+                postService.populateUserData
+        )
+        .then((posts)=>{
+            res.send({posts})
+        })
+        .catch((error) => {
+            res.send(error)
+        })
 };
