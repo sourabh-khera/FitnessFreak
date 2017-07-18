@@ -1,0 +1,21 @@
+.item-active img{
+    width:100%;
+}
+.item img{
+    width: 100%;
+}
+.item-active{
+    height:5450px;
+}
+.item{
+    height:545px;
+}
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+    height:300px;
+}
+.carousel-caption{
+    font-size: 30px;
+    font-weight: bolder;
+}

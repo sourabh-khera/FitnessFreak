@@ -4,6 +4,7 @@
 
 const userRoutes=require("../api/users/user.routes");
 const postRoutes=require("../api/posts/post.routes");
+const exerciseRoutes=require("../api/excercises/excercise.route");
 const cors=require("cors");
 const jwt_token=require("jsonwebtoken");
 const loggeIn = (req,res,next) => {
@@ -26,6 +27,6 @@ module.exports=(app)=>{
 
     app.use(cors());
     userRoutes(app);
-    postRoutes(app,loggeIn)
-
+    postRoutes(app,loggeIn);
+    exerciseRoutes(app,loggeIn)
 };

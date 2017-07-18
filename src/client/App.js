@@ -5,8 +5,12 @@ import Login from "./components/login"
 import Home from "./components/home";
 import SignUp from "./components/signup";
 import Menu from "./components/menu";
-import Createpost from "./components/createposts"
+import Postwrapper from "./components/postWrapper"
+import Excercises from "./components/exercises"
 import authenticate from "./components/HOC/authenticate"
+import Chestworkoutlists from "./components/Chest_Workouts/exercise.lists"
+import Backworkoutlists from "./components/Back_workouts/exercise.lists"
+import Instruction from "../client/components/instruction"
 import "./css/signup.css"
 import "./css/landingPage.css"
 import "./css/logregWrapper.css"
@@ -16,6 +20,9 @@ import "./css/navbar.css"
 import "./css/home.css"
 import "./css/createposts.css"
 import "./css/Menu.css"
+import "./css/excercises.css"
+import "./css/workoutlists.css"
+
 
 class App extends Component {
   render() {
@@ -27,7 +34,11 @@ class App extends Component {
             <Route path="/welcome" component={authenticate(Welcome)} />
             <Route path="/home" component={authenticate(Home)}/>
             <Route path="/menu" component={authenticate(Menu)}/>
-            <Route path="/createpost" component={authenticate(Createpost)}/>
+            <Route path="/postWrapper" component={authenticate(Postwrapper)}/>
+            <Route path="/excercises" component={authenticate(Excercises)}/>
+            <Route path="/chestworkoutlists" component={authenticate(Chestworkoutlists)}/>
+            <Route path="/backworkoutlists" component={authenticate(Backworkoutlists)}/>
+            <Route path="/instruction/:key" component={authenticate(Instruction)} />
         </div>
       </Router>
     )

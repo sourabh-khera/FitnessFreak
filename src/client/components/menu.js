@@ -10,13 +10,13 @@ export default class Menu extends React.Component{
         return(
             <div className="MenuContainer">
                 <div className="item1">
-                    <button>Exercises</button>
+                    <button><Link to="/excercises">Exercises</Link></button>
                 </div>
                 <div className="item2">
                     <button>Gallery</button>
                 </div>
                 <div className="item3">
-                    <button><Link to="/createpost">
+                    <button><Link to="/postWrapper">
                         Upload Photos<br/>
                              &<br/>
                             Videos
