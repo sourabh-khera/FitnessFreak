@@ -41,13 +41,13 @@ class Instruction extends React.Component {
 
     render() {
          const instructions=this.props.exerciseData.map((item)=>{
-                  if(item.excerciseName===this.exerciseName) {
+                  if(item.exerciseName===this.exerciseName) {
                       console.log("item------",item);
                       return item.instructions;
                   }
          });
          const videoUrl=this.props.exerciseData.map((item)=>{
-             if(item.excerciseName===this.exerciseName) {
+             if(item.exerciseName===this.exerciseName) {
                  return item.videoUrl;
              }
          });

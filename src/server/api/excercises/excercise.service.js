@@ -5,7 +5,7 @@ const exerciseModel = require("./exercise.model");
 
 exports.getExerciseData = (exerciseName) => {
     return new Promise((resolve, reject) => {
-        exerciseModel.find({excerciseName: exerciseName}, (err, exerciseData) => {
+        exerciseModel.find({exerciseName: exerciseName}, (err, exerciseData) => {
             if (err) {
                 reject(err)
             }

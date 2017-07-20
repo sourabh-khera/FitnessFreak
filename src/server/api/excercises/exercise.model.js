@@ -4,7 +4,7 @@
 const Mongoose=require("mongoose");
 
 const ExerciseSchema=new Mongoose.Schema({
-   excerciseName:{
+   exerciseName:{
        type:String,
    },
     instructions:{
