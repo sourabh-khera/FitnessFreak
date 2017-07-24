@@ -1,13 +1,9 @@
-/**
- * Created by sourabh on 14/7/17.
- */
 import React from "react"
-import chest1 from "../../assets/image/chest1.jpg";
-import chest2 from "../../assets/image/Incline_Dumbbell_Bench_Press_Starting.jpg";
-import chest3 from "../../assets/image/chest3.jpg";
-import chest4 from "../../assets/image/chest4.jpg";
+import shoulder1 from "../../assets/image/shoulder1.jpg";
+import shoulder2 from "../../assets/image/shoulder2.jpg";
+import shoulder3 from "../../assets/image/shoulder3.jpg";
 import {Link} from "react-router-dom"
-const Chestworkoutlists = () => {
+const Shoulderworkoutlists = () => {
 
     return (
 
@@ -20,23 +16,23 @@ const Chestworkoutlists = () => {
                 </ol>
                 <div className="carousel-inner">
                     <div className="item active">
-                        <Link to="/instruction/InclineBenchPress"><img src={chest1}/></Link>
-                            <div className="carousel-caption">
-                                <h3>Incline Bench Press</h3>
-                            </div>
-                    </div>
-
-                    <div className="item">
-                        <Link to="/instruction/InclineBenchPressDumbbell"> <img src={chest2}/></Link>
-                            <div className="carousel-caption">
-                                <h3>Incline Bench Dumbbell Press</h3>
-
-                            </div>
-                    </div>
-                    <div className="item">
-                        <Link to="/instruction/Butterflies"> <img src={chest4}/></Link>
+                        <Link to="/instruction/FrontPlateRaise"><img src={shoulder1}/></Link>
                         <div className="carousel-caption">
-                            <h3>Butterflies</h3>
+                            <h3>Front Plate Raise</h3>
+                        </div>
+                    </div>
+
+                    <div className="item">
+                        <Link to="/instruction/DumbbellShoulderPress"> <img src={shoulder2}/></Link>
+                        <div className="carousel-caption">
+                            <h3>Dumbbell Shoulder Press</h3>
+
+                        </div>
+                    </div>
+                    <div className="item">
+                        <Link to="/instruction/SideLateralRaise"> <img src={shoulder3}/></Link>
+                        <div className="carousel-caption">
+                            <h3>Side Lateral Raise</h3>
                         </div>
                     </div>
 
@@ -54,6 +50,6 @@ const Chestworkoutlists = () => {
         </div>
     )
 
-    };
+};
 
-export default Chestworkoutlists
+export default Shoulderworkoutlists

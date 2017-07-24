@@ -1,13 +1,9 @@
-/**
- * Created by sourabh on 14/7/17.
- */
 import React from "react"
-import chest1 from "../../assets/image/chest1.jpg";
-import chest2 from "../../assets/image/Incline_Dumbbell_Bench_Press_Starting.jpg";
-import chest3 from "../../assets/image/chest3.jpg";
-import chest4 from "../../assets/image/chest4.jpg";
+import bicepRod from "../../assets/image/biceps1.jpg";
+import hammer from "../../assets/image/biceps2.jpg";
+import alternate from "../../assets/image/alternate.png"
 import {Link} from "react-router-dom"
-const Chestworkoutlists = () => {
+const Bicepsworkoutlists = () => {
 
     return (
 
@@ -20,23 +16,23 @@ const Chestworkoutlists = () => {
                 </ol>
                 <div className="carousel-inner">
                     <div className="item active">
-                        <Link to="/instruction/InclineBenchPress"><img src={chest1}/></Link>
-                            <div className="carousel-caption">
-                                <h3>Incline Bench Press</h3>
-                            </div>
-                    </div>
-
-                    <div className="item">
-                        <Link to="/instruction/InclineBenchPressDumbbell"> <img src={chest2}/></Link>
-                            <div className="carousel-caption">
-                                <h3>Incline Bench Dumbbell Press</h3>
-
-                            </div>
-                    </div>
-                    <div className="item">
-                        <Link to="/instruction/Butterflies"> <img src={chest4}/></Link>
+                        <Link to="/instruction/WideGripStandingCurl"><img src={bicepRod}/></Link>
                         <div className="carousel-caption">
-                            <h3>Butterflies</h3>
+                            <h3>Wide-Grip Standing Barbell Curl</h3>
+                        </div>
+                    </div>
+
+                    <div className="item">
+                        <Link to="/instruction/HammerCurls"> <img src={hammer}/></Link>
+                        <div className="carousel-caption">
+                            <h3>Hammer Curls</h3>
+
+                        </div>
+                    </div>
+                    <div className="item">
+                        <Link to="/instruction/AlternateDumbbell"> <img src={alternate}/></Link>
+                        <div className="carousel-caption">
+                            <h3>Alternate Dumbbell Curls</h3>
                         </div>
                     </div>
 
@@ -54,6 +50,6 @@ const Chestworkoutlists = () => {
         </div>
     )
 
-    };
+};
 
-export default Chestworkoutlists
+export default Bicepsworkoutlists

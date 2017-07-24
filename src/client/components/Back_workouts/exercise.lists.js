@@ -16,21 +16,21 @@ const Backworkoutlists = () => {
                 </ol>
                 <div className="carousel-inner">
                     <div className="item active">
-                        <Link to="/instruction/frontPully"><img src={frontPully}/></Link>
+                        <Link to="/instruction/LatPulldown"><img src={frontPully}/></Link>
                         <div className="carousel-caption">
-                            <h3>FrontPully</h3>
+                            <h3>Lat Pulldown</h3>
                         </div>
                     </div>
 
                     <div className="item">
-                        <Link to="/instruction/pullOver"> <img src={pullOver}/></Link>
+                        <Link to="/instruction/PullOver"> <img src={pullOver}/></Link>
                         <div className="carousel-caption">
                             <h3>PullOver</h3>
 
                         </div>
                     </div>
                     <div className="item">
-                        <Link to="/instruction/oneArmRow"> <img src={oneArmRow}/></Link>
+                        <Link to="/instruction/OneArmRow"> <img src={oneArmRow}/></Link>
                         <div className="carousel-caption">
                             <h3>One Arm Row</h3>
                         </div>

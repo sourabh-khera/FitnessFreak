@@ -169,6 +169,10 @@
     bottom: 0;
     z-index: 0;
 }
+.tricepsWrapper h1 a{
+    text-decoration: none;
+    color: white;
+}
 
 .tricepsWrapper h1 {
     position: relative;
@@ -219,6 +223,10 @@
     margin: 0;
     line-height: 250px;
 }
+.shoulderWrapper h1 a{
+    text-decoration: none;
+    color: white;
+}
 
 .legsParent {
     width: 400px;
@@ -259,6 +267,10 @@
     text-align: center;
     margin: 0;
     line-height: 250px;
+}
+.legsWrapper h1 a{
+    text-decoration: none;
+    color: white;
 }
 
 .row{

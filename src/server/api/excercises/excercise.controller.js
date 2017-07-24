@@ -6,6 +6,7 @@ const exerciseService = require("./excercise.service");
 
 exports.fetchExercise = (req,res) => {
    const exerciseName=req.query.exerciseName;
+   console.log(exerciseName)
 
    exerciseService.getExerciseData(exerciseName)
        .then(exerciseData => {

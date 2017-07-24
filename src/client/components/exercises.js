@@ -29,7 +29,7 @@ const Excercises = () => {
                         <div className="bicepsOverlay">
 
                         </div>
-                        <h1>BICEPS</h1>
+                        <h1><Link to="/bicepsworkoutlists">BICEPS</Link></h1>
                     </div>
                 </div>
                 <div className="tricepsParent col-md-4">
@@ -37,7 +37,7 @@ const Excercises = () => {
                         <div className="tricepsOverlay">
 
                         </div>
-                        <h1>TRICEPS</h1>
+                        <h1><Link to="/tricepsworkoutlists">TRICEPS</Link></h1>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ const Excercises = () => {
                         <div className="shoulderOverlay">
 
                         </div>
-                        <h1>SHOULDER</h1>
+                        <h1><Link to="/shoulderworkoutlists">SHOULDER</Link></h1>
                     </div>
                 </div>
                 <div className="legsParent col-md-4">
@@ -55,7 +55,7 @@ const Excercises = () => {
                         <div className="legsOverlay">
 
                         </div>
-                        <h1>LEGS</h1>
+                        <h1><Link to="/legsworkoutlists">LEGS</Link></h1>
                     </div>
                 </div>
             </div>

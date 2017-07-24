@@ -10,6 +10,10 @@ import Excercises from "./components/exercises"
 import authenticate from "./components/HOC/authenticate"
 import Chestworkoutlists from "./components/Chest_Workouts/exercise.lists"
 import Backworkoutlists from "./components/Back_workouts/exercise.lists"
+import Tricepsworkoutlists from "./components/triceps_workouts/exercise.lists"
+import Shoulderworkoutlists from "./components/shoulder_workouts/exercise.lists"
+import Bicepsworkoutlists from "./components/biceps_workouts/exercise.lists"
+import Legsworkoutlists from "./components/legs_workouts/exercise.lists"
 import Instruction from "../client/components/instruction"
 import "./css/signup.css"
 import "./css/landingPage.css"
@@ -38,6 +42,10 @@ class App extends Component {
             <Route path="/excercises" component={authenticate(Excercises)}/>
             <Route path="/chestworkoutlists" component={authenticate(Chestworkoutlists)}/>
             <Route path="/backworkoutlists" component={authenticate(Backworkoutlists)}/>
+            <Route path="/bicepsworkoutlists" component={authenticate(Bicepsworkoutlists)}/>
+            <Route path="/tricepsworkoutlists" component={authenticate(Tricepsworkoutlists)}/>
+            <Route path="/shoulderworkoutlists" component={authenticate(Shoulderworkoutlists)}/>
+            <Route path="/legsworkoutlists" component={authenticate(Legsworkoutlists)}/>
             <Route path="/instruction/:key" component={authenticate(Instruction)} />
         </div>
       </Router>
