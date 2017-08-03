@@ -8,7 +8,6 @@ class Instruction extends React.Component {
     constructor(props) {
         super(props);
         this.exerciseName = props.match.params.key;
-        console.log("key------", this.exerciseName);
     }
 
     // speak = (text) => {
@@ -40,29 +39,42 @@ class Instruction extends React.Component {
     }
 
     render() {
-         const instructions=this.props.exerciseData.map((item)=>{
-                  if(item.exerciseName===this.exerciseName) {
-                      console.log("item------",item);
-                      return item.instructions;
-                  }
-         });
-         const videoUrl=this.props.exerciseData.map((item)=>{
-             if(item.exerciseName===this.exerciseName) {
-                 return item.videoUrl;
-             }
-         });
+        const instruction = this.props.exerciseData.map((item) => {
+            if (item.exerciseName === this.exerciseName) {
+                const steps = item.instructions.map((instruction) => {
+                    console.log("item------", instruction);
+                    return <li>{instruction}</li>
+                });
+                return steps
+            }
+        });
+        const videoUrl = this.props.exerciseData.map((item) => {
+            if (item.exerciseName === this.exerciseName) {
+                return item.videoUrl;
+            }
+        });
+        const imageUrl = this.props.exerciseData.map((item) => {
+            if (item.exerciseName === this.exerciseName) {
+                return item.imageUrl;
+            }
+        });
 
         return (
-            <div className="speak">
-                <div className="instruction">
-                    <h1>INSTRUCTIONS:-</h1>
-                    {instructions}
+            <div className="instructionParent">
+                <h1>INSTRUCTIONS:-</h1>
+                    <div className="instructionsDisplay">
+                        <ul>
+                            {instruction}
+                        </ul>
+                    </div>
+                    <div className="muscleImage">
+                        <h3>Main Muscle</h3>
+                        <img src={imageUrl}/>
+                    </div>
+
+                <div className="videoHeading">
+                    For More Help Look At The Video...
                 </div>
-                {/*<div className="controllers">*/}
-                    {/*<button title="Play" className="Play" onClick={() => this.speak(instructions)}>Play</button>*/}
-                    {/*<button title="Pause" className="Pause" onClick={() => this.pauseVoice()}>Pause</button>*/}
-                    {/*<button title="Resume" className="Resume" onClick={() => this.resumeVoice()}>Resume</button>*/}
-                {/*</div>*/}
                 <div className="videoUrl">
                     <iframe width="560" height="315" src={videoUrl} frameBorder="0" allowFullScreen></iframe>
                 </div>

@@ -3,8 +3,11 @@
  */
 import {
     fetchExerciseSuccess,
-    fetchExerciseFailure
+    fetchExerciseFailure,
+    fetchExercisesListSuccess,
+    fetchExercisesListFailure,
 } from "./excercise.actions"
+import fetch from "isomorphic-fetch"
 
 export const fetchExercise = (exerciseName,jwt_token) => {
   return (dispatch) => {
@@ -13,8 +16,7 @@ export const fetchExercise = (exerciseName,jwt_token) => {
           headers:{
               'authorization':jwt_token,
           }
-      })
-          .then(response=>response.json())
+      }).then(response=>response.json())
           .then(data => {
               dispatch(fetchExerciseSuccess(data.exerciseData))
           })
@@ -22,4 +24,22 @@ export const fetchExercise = (exerciseName,jwt_token) => {
               dispatch(fetchExerciseFailure(error))
           })
   }
+};
+
+export const fetchExercisesList = (bodypart,jwt_token) => {
+    return (dispatch)=>{
+        fetch("http://localhost:3000/api/fetch/exerciseslist?bodypart="+bodypart,{
+            method:'get',
+            headers:{
+                'authorization':jwt_token,
+            }
+        })
+            .then(response=>response.json())
+            .then((data=>{
+                dispatch(fetchExercisesListSuccess(data.list))
+            }))
+            .catch(error=>{
+                dispatch(fetchExercisesListFailure(error))
+            })
+    }
 };

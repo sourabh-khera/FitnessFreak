@@ -16,7 +16,7 @@ const Bicepsworkoutlists = () => {
                 </ol>
                 <div className="carousel-inner">
                     <div className="item active">
-                        <Link to="/instruction/WideGripStandingCurl"><img src={bicepRod}/></Link>
+                        <Link to="/instruction/WideGripStandingBarbellCurl"><img src={bicepRod}/></Link>
                         <div className="carousel-caption">
                             <h3>Wide-Grip Standing Barbell Curl</h3>
                         </div>

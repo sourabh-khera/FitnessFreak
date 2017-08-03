@@ -6,4 +6,5 @@ const exerciseController = require("./excercise.controller");
 
 module.exports=(app,loggedIn) => {
    app.get("/api/fetch/exercise",loggedIn,exerciseController.fetchExercise);
+    app.get("/api/fetch/exerciseslist",loggedIn,exerciseController.fetchExercisesList);
 };

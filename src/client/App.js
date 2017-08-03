@@ -14,7 +14,8 @@ import Tricepsworkoutlists from "./components/triceps_workouts/exercise.lists"
 import Shoulderworkoutlists from "./components/shoulder_workouts/exercise.lists"
 import Bicepsworkoutlists from "./components/biceps_workouts/exercise.lists"
 import Legsworkoutlists from "./components/legs_workouts/exercise.lists"
-import Instruction from "../client/components/instruction"
+import Instruction from "./components/instruction"
+import ScheduleCalendar from "./components/calendar"
 import "./css/signup.css"
 import "./css/landingPage.css"
 import "./css/logregWrapper.css"
@@ -26,8 +27,9 @@ import "./css/createposts.css"
 import "./css/Menu.css"
 import "./css/excercises.css"
 import "./css/workoutlists.css"
-
-
+import "./css/instructions.css"
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "./css/calendar.css"
 class App extends Component {
   render() {
     return (
@@ -47,6 +49,7 @@ class App extends Component {
             <Route path="/shoulderworkoutlists" component={authenticate(Shoulderworkoutlists)}/>
             <Route path="/legsworkoutlists" component={authenticate(Legsworkoutlists)}/>
             <Route path="/instruction/:key" component={authenticate(Instruction)} />
+            <Route path="/schedule" component={authenticate(ScheduleCalendar)} />
         </div>
       </Router>
     )

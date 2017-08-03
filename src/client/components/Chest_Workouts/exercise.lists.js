@@ -34,7 +34,7 @@ const Chestworkoutlists = () => {
                             </div>
                     </div>
                     <div className="item">
-                        <Link to="/instruction/Butterflies"> <img src={chest4}/></Link>
+                        <Link to="/instruction/ButterFlies"> <img src={chest4}/></Link>
                         <div className="carousel-caption">
                             <h3>Butterflies</h3>
                         </div>

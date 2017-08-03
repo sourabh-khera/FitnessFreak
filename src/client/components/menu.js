@@ -13,7 +13,7 @@ export default class Menu extends React.Component{
                     <button><Link to="/excercises">Exercises</Link></button>
                 </div>
                 <div className="item2">
-                    <button>Gallery</button>
+                    <button><Link to="/schedule">Schedule</Link></button>
                 </div>
                 <div className="item3">
                     <button><Link to="/postWrapper">

@@ -1,0 +1,39 @@
+.instructionsDisplay{
+    float: left;
+    font-weight: bolder;
+    width:600px;
+    margin-top: 20px;
+}
+.muscleImage{
+   float: left;
+    margin-left: 100px;
+}
+.instructionsDisplay ul li{
+    padding: 10px;
+}
+.instructionParent{
+    margin-left: 35px;
+    margin-top: 40px;
+}
+.instructionParent h1{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.videoUrl{
+    width:500px;
+}
+.videoHeading{
+    width: 500px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.muscleImage h3{
+    font-size: 24px;
+    text-align: -webkit-center;
+    font-weight: bolder;
+    background-color: thistle;
+    border-radius: 5px;
+    padding: 2px;
+}

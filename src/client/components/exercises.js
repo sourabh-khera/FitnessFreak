@@ -27,7 +27,6 @@ const Excercises = () => {
                 <div className=" bicepsParent col-md-4">
                     <div className="bicepsWrapper">
                         <div className="bicepsOverlay">
-
                         </div>
                         <h1><Link to="/bicepsworkoutlists">BICEPS</Link></h1>
                     </div>
@@ -35,7 +34,6 @@ const Excercises = () => {
                 <div className="tricepsParent col-md-4">
                     <div className="tricepsWrapper ">
                         <div className="tricepsOverlay">
-
                         </div>
                         <h1><Link to="/tricepsworkoutlists">TRICEPS</Link></h1>
                     </div>
@@ -45,7 +43,6 @@ const Excercises = () => {
                 <div className="shoulderParent col-md-4">
                     <div className="shoulderWrapper ">
                         <div className="shoulderOverlay">
-
                         </div>
                         <h1><Link to="/shoulderworkoutlists">SHOULDER</Link></h1>
                     </div>
@@ -53,7 +50,6 @@ const Excercises = () => {
                 <div className="legsParent col-md-4">
                     <div className="legsWrapper">
                         <div className="legsOverlay">
-
                         </div>
                         <h1><Link to="/legsworkoutlists">LEGS</Link></h1>
                     </div>

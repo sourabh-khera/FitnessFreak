@@ -8,9 +8,12 @@ const ExerciseSchema=new Mongoose.Schema({
        type:String,
    },
     instructions:{
-       type:String,
+       type:[String],
     },
     videoUrl:{
+       type:String,
+    },
+    imageUrl:{
        type:String,
     }
 },{versionKey:false});

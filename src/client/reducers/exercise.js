@@ -3,11 +3,14 @@
  */
 import {
     FETCH_EXERCISE_SUCCESS,
-     FETCH_EXERCISE_FAILURE
+     FETCH_EXERCISE_FAILURE,
+    FETCH_EXERCISESLIST_SUCCESS,
+    FETCH_EXERCISESLIST_FAILURE,
 } from "../constants"
 
 const exerciseState={
   exerciseData:[],
+  exercisesList:[],
     error:null,
 };
 export const exerciseReducer = (state=exerciseState,action) => {
@@ -20,6 +23,19 @@ export const exerciseReducer = (state=exerciseState,action) => {
         }
 
         case FETCH_EXERCISE_FAILURE : {
+            return {
+                ...state,
+                error:action.error,
+            }
+        }
+
+        case FETCH_EXERCISESLIST_SUCCESS:{
+            return {
+                ...state,
+                exercisesList:action.exercisesList
+            }
+        }
+        case FETCH_EXERCISESLIST_FAILURE:{
             return {
                 ...state,
                 error:action.error,
