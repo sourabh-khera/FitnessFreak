@@ -2,7 +2,7 @@ import React from 'react'
 import BigCalendar from 'react-big-calendar'
 import moment from 'moment'
 import ReactModal from './HOC/reactModel'
-import ScheduleWrapper from './ScheduleWrapper'
+import Schedule from "./schedule"
 
 
 let events = [];
@@ -33,7 +33,7 @@ export default class ScheduleCalendar extends React.Component {
 
     render() {
         const {showModal} = this.state;
-        const Modal = ReactModal(ScheduleWrapper, {
+        const Modal = ReactModal(Schedule, {
             showModal,
             closeModal: this.closeModal,
         });

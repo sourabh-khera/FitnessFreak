@@ -6,13 +6,17 @@ import {
      FETCH_EXERCISE_FAILURE,
     FETCH_EXERCISESLIST_SUCCESS,
     FETCH_EXERCISESLIST_FAILURE,
+    ADD_TO_SCHEDULE_LIST,
+    CLEAR_SCHEDULE_LIST
 } from "../constants"
 
 const exerciseState={
-  exerciseData:[],
-  exercisesList:[],
+    exerciseData:[],
+    exercisesList:[],
+    selectedExercise: [],
     error:null,
 };
+
 export const exerciseReducer = (state=exerciseState,action) => {
     switch(action.type){
         case FETCH_EXERCISE_SUCCESS : {
@@ -32,19 +36,32 @@ export const exerciseReducer = (state=exerciseState,action) => {
         case FETCH_EXERCISESLIST_SUCCESS:{
             return {
                 ...state,
-                exercisesList:action.exercisesList
+                exercisesList: action.exercisesList
             }
         }
         case FETCH_EXERCISESLIST_FAILURE:{
             return {
                 ...state,
-                error:action.error,
+                error: action.error,
+            }
+        }
+        case CLEAR_SCHEDULE_LIST: {
+            return {
+                ...state,
+                selectedExercise: []
+            }
+        }
+        case ADD_TO_SCHEDULE_LIST: {
+            const selectedExercise = state.selectedExercise.slice()
+            selectedExercise.push(action.exercise)
+            return {
+                ...state,
+                selectedExercise,
             }
         }
         default:{
             return state
         }
-
     }
 
 };

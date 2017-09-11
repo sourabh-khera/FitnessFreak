@@ -3,27 +3,30 @@
  */
 import React from "react";
 import { DropdownButton, MenuItem ,ButtonToolbar} from "react-bootstrap";
-import {fetchExercisesList} from "../actions/excercise"
+import Listofexercises from "./displayExercisesList"
+import {fetchExercisesList, clearScheduleList} from "../actions/excercise"
 import {connect} from "react-redux"
 
 class Schedule extends React.Component {
     constructor(){
         super();
         this.state={
-            title:'select-body-part'
+            title:'select-body-part',
+            list:[],
         }
     }
-    handleChange = (e) => {
+    handleDropdownChange = (e) => {
+        this.props.clearScheduleList()
+        const token = localStorage.getItem('token');
+        this.props.fetchExercisesList(e,token);
         this.setState({title:e});
-        const token=localStorage.getItem('token');
-      this.props.fetchExercisesList(e,token)
-
     };
     render() {
         return (
-            <div>
+            <div className="scheduleWrapper">
+            <div className="dropDown">
                 <ButtonToolbar>
-                <DropdownButton bsSize="large" bsStyle="primary" title={this.state.title} onSelect={this.handleChange} id="dropdown-size-medium">
+                <DropdownButton bsSize="large" bsStyle="primary" title={this.state.title} onSelect={this.handleDropdownChange} id="dropdown-size-medium">
                     <MenuItem eventKey="Chest">Chest</MenuItem>
                     <MenuItem eventKey="Shoulder">Shoulder</MenuItem>
                     <MenuItem eventKey="Biceps">Biceps</MenuItem>
@@ -32,6 +35,10 @@ class Schedule extends React.Component {
                     <MenuItem eventKey="Back">Back</MenuItem>
                 </DropdownButton>
                 </ButtonToolbar>
+            </div>
+                <div className="list">
+                <Listofexercises />
+                </div>
             </div>
         )
     }
@@ -42,8 +49,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
-   fetchExercisesList: (bodypart,token) => { dispatch(fetchExercisesList(bodypart,token))}
+    clearScheduleList: () => dispatch(clearScheduleList()),
+    fetchExercisesList: (bodypart,token) => { dispatch(fetchExercisesList(bodypart,token))}
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Schedule)

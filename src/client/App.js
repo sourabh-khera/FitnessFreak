@@ -30,6 +30,7 @@ import "./css/workoutlists.css"
 import "./css/instructions.css"
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./css/calendar.css"
+import "./css/schedule.css"
 class App extends Component {
   render() {
     return (

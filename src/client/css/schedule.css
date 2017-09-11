@@ -1,0 +1,11 @@
+.scheduleWrapper{
+    display: inline-block;
+}
+.dropDown{
+    width: 300px;
+    float: left;
+}
+.list{
+    width: 300px;
+    float: left;
+}
